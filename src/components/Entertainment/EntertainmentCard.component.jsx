@@ -27,8 +27,6 @@ const EntertainmentCardSlider=()=>{
     autoplay: false,
     slidesToShow: 5,
     slidesToScroll: 4,
-    nextArrow:<NextArrow/>,
-    prevArrow:<PrevArrow/>,
     initialSlide: 0,
     responsive: [
       {

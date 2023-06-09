@@ -10,15 +10,34 @@ import axios from 'axios'
 const HomePage = () => {
   const [recommendedMovies,setRecommendedMovies]=useState([])
   const [premierMovies,setPremierMovies]=useState([])
-  const [onlineStreamEvents, setOnlineStreamEvents]=useState([])
+  const [UpcomingMovies, setUpcomingMovies]=useState([])
 
   useEffect(()=>{
+    const requestPopularMovies=async ()=>{
+      const getPopularMovies=await axios.get('/movie/popular')
+      setRecommendedMovies(getPopularMovies.data.results)
+    }
+    requestPopularMovies();
+  },[])
+  
+  useEffect(()=>{
     const requestTopRatedMovies=async ()=>{
-      const getTopRatedMovies=await axios.get('https://api.themoviedb.org/3/movie/top_rated?api_key=2995c97da0d30ec3f8734d93e1f6ea57')
-      setRecommendedMovies(getTopRatedMovies.data.results)
+      const getTopRatedMovies=await axios.get('/movie/top_rated')
+      setPremierMovies(getTopRatedMovies.data.results)
     }
     requestTopRatedMovies();
   },[])
+
+  useEffect(()=>{
+    const requestUpcomingMovies=async ()=>{
+      const getUpcomingMovies=await axios.get('/movie/upcoming')
+      setUpcomingMovies(getUpcomingMovies.data.results)
+    }
+    requestUpcomingMovies();
+  },[])
+  
+
+
 
   return (
     <>
@@ -28,7 +47,7 @@ const HomePage = () => {
       <EntertainmentCardSlider/>  
     </div>
 
-    <div className='ml-16 mr-16 px-40 md:px-12 my-8'>
+    <div className="ml-16 mr-16 px-40 md:px-12 my-8">
       <PosterSlider 
         title="Recommended Movies"
         subtitle="List of recommended movies"
@@ -55,9 +74,9 @@ const HomePage = () => {
     </div>
     <div container className='ml-16 mr-16 px-40 md:px-12 my-8'>
       <PosterSlider 
-        title="Online Streaming Events"
+        title="Upcoming Movies"
         subtitle=""
-        poster={onlineStreamEvents}
+        poster={UpcomingMovies}
         isDark={false}
         />
     </div>
