@@ -51,7 +51,7 @@ const HomePage = () => {
       <PosterSlider 
         title="Recommended Movies"
         subtitle="List of recommended movies"
-        poster={recommendedMovies}
+        posters={recommendedMovies}
         isDark={false}
         />
     </div>
@@ -67,7 +67,7 @@ const HomePage = () => {
         <PosterSlider 
         title="Premieres"
         subtitle="Brand new releases every Friday"
-        poster={premierMovies}
+        posters={premierMovies}
         isDark={true}
         />
       </div>
@@ -76,7 +76,7 @@ const HomePage = () => {
       <PosterSlider 
         title="Upcoming Movies"
         subtitle=""
-        poster={UpcomingMovies}
+        posters={UpcomingMovies}
         isDark={false}
         />
     </div>
