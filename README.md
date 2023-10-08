@@ -1,10 +1,4 @@
-# BookMyShow Clone
-
-Welcome to the BookMyShow Clone project!
-
-This is a web application that aims to replicate some of the functionalities of the popular ticket-booking platform, BookMyShow. BookMyShow Clone is a front-end project that provides users with an intuitive and user-friendly interface for discovering and booking tickets for various movies. It is built using React and MovieDb API. 
-
-The project utilizes Axios, a popular JavaScript library, to connect to the MovieDB API. This integration allows the application to fetch real-time movie data, such as movie listings, details, and other relevant information. By leveraging the power of Axios, the BookMyShow Clone offers users an up-to-date and comprehensive selection of movies and events, enhancing the overall user experience.
+# Moviepedia
 
 ## Demo
 
