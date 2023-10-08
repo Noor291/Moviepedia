@@ -2,7 +2,7 @@
 
 ## Demo
 
-Check out the live demo of the application [here](https://book-my-show-clone-virid.vercel.app/).
+Check out the live demo of the application [here](https://moviepedia-noor291.vercel.app/).
 
 ## Installation
 
