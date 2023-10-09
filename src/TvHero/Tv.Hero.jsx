@@ -1,11 +1,11 @@
 import React, { useContext } from "react";
-import { MovieContext } from "../../context/Movie.context";
-import MovieInfo from "./MovieInfo.Component";
+import { TvContext } from "../context/Tv.context";
+import TvInfo from "./Tv.info";
 
-const MovieHero = () => {
-  const { movie, rentMovie, buyMovie } = useContext(MovieContext);
+const TvHero = () => {
+  const { tv } = useContext(TvContext);
 
-  const genres = movie.genres?.map(({ name }) => name).join(", ");
+  const genres = tv.genres?.map(({ name }) => name).join(", ");
 
   return (
     <>
@@ -13,7 +13,7 @@ const MovieHero = () => {
         {/* mobile and tab sizes */}
         <div className="lg:hidden w-full">
           <img
-            src={`https://image.tmdb.org/t/p/original${movie.poster_path}`}
+            src={`https://image.tmdb.org/t/p/original${tv.poster_path}`}
             alt="cover poster"
             className="m-4 rounded"
             style={{ width: "calc(100% - 2rem)" }}
@@ -22,9 +22,9 @@ const MovieHero = () => {
         <div className="flex flex-col gap-3 lg:hidden">
           <div className="flex flex-col-reverse gap-3 px-4 my-3">
             <div className="text-black flex flex-col gap-2 md:px-4">
-              <h4>{movie.vote_average}/10</h4>
+              <h4>{tv.vote_average}/10</h4>
               <h4>
-                {genres}
+                {tv.runtime} min | {genres}
               </h4>
             </div>
           </div>
@@ -47,17 +47,17 @@ const MovieHero = () => {
           <div className="absolute z-30 left-24 top-10 flex items-center gap-10">
             <div className="w-64 h-96">
               <img
-                src={`https://image.tmdb.org/t/p/original${movie.poster_path}`}
+                src={`https://image.tmdb.org/t/p/original${tv.poster_path}`}
                 alt="Movie Poster"
                 className="w-full h-full rounded-lg"
               />
             </div>
             <div>
-              <MovieInfo movie={movie} />
+              <TvInfo tv={tv} />
             </div>
           </div>
           <img
-            src={`https://image.tmdb.org/t/p/original${movie.backdrop_path}`}
+            src={`https://image.tmdb.org/t/p/original${tv.backdrop_path}`}
             alt="backgrop poster"
             className="w-full h-full object-cover object-center"
           />
@@ -66,4 +66,4 @@ const MovieHero = () => {
   );
 };
 
-export default MovieHero;
+export default TvHero;

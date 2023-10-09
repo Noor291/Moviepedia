@@ -1,9 +1,9 @@
 import React from "react";
 import { Link } from "react-router-dom";
 
-const MoviePoster = (props) => {
+const Tv = (props) => {
   return (
-    <Link to={`/movie/${props.id}`}>
+    <Link to={`/tv/${props.id}`}>
       <div className="flex flex-col items-start gap-2 px-1 md:px-3">
         <div className="h-40 md:h-80">
           <img
@@ -17,15 +17,14 @@ const MoviePoster = (props) => {
             props.isDark ? "text-white" : "text-gray-700"
           }`}
         >
-          {props.title}
+          {props.name}
         </h3>
       </div>
     </Link>
   );
 };
-
-const Poster = (props) => {
-  return <MoviePoster {...props} />;
+const PosterTv = (props) => {
+  return <Tv {...props} />;
 };
 
-export default Poster;
+export default PosterTv;

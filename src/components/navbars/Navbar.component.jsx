@@ -28,7 +28,7 @@ function NavMd(){
   </div>
 </a>
   <div className='w-full flex items-center gap-3 bg-white px-3 py-1 rounded-md'>
-    <BiSearch/>
+    <search/>
     <input type='search' className='w-full bg-transparent border-none focus:outline-none' placeholder="Search for movies, events, plays, sports and activities"/>
   </div>
   </>
@@ -37,10 +37,10 @@ function NavMd(){
 function NavLg(){
   const navigate = useNavigate()
   const navigateToMovies = () => {
-    navigate('/plays');
+    navigate('/movies');
   };
   const navigateToTVShows = () => {
-    navigate('/');
+    navigate('/tvshows');
   };
   return <>
   <div className='container flex mx-auto px-4 items-center justify-between'>
@@ -51,7 +51,6 @@ function NavLg(){
       </div>
     </a>
       <div className='w-full flex items-center gap-3 bg-white pl-2 px-3 py-1 rounded-md'>
-        <BiSearch/>
         <input type='search' className='w-full bg-transparent border-none focus:outline-none' placeholder='Search for Movies or TV Shows'/>
       </div>
     </div>
