@@ -26,7 +26,7 @@ const TvPage = () => {
 
   useEffect(()=>{
     const requestSimilarShows=async()=>{
-      const getSimilarShows=await axios.get(`/tv/${id}/recommendations`);
+      const getSimilarShows=await axios.get(`/tv/${id}/similar`);
       setSimilarShows(getSimilarShows.data.results);
     }
     requestSimilarShows();

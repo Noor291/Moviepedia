@@ -3,7 +3,7 @@ import Slider from 'react-slick'
 import Poster from '../Poster/Poster.Component'
 import PosterTv from '../Poster/Poster.Tv'
 const PosterSlider = (props) => {
-  const{title,posters,subtitle,isDark,config,isPlay}=props;
+  const{title,posters,subtitle,isDark,isPlay}=props;
   const settings={
     infinite:true,
     speed:500,
@@ -49,29 +49,14 @@ const PosterSlider = (props) => {
           {subtitle}
         </p>
       </div>
-      {config && !isPlay && (
-        <Slider {...config}>
+      {!isPlay && (
+        <Slider {...settings}>
           {posters.map((each, index) => (
             <Poster {...each} isDark={isDark} key={index} />
           ))}
         </Slider>
       )}
-
-      {!config && !isPlay &&(
-        <Slider {...settings}>
-          {posters.map((each, index) => (
-            <Poster {...each} isDark={isDark} key={index} />
-          ))}
-      </Slider>
-        )}
-      {!config && isPlay &&(
-        <Slider {...settings}>
-          {posters.map((each, index) => (
-            <PosterTv {...each} isDark={isDark} key={index} />
-          ))}
-      </Slider>
-        )}
-        {!config && isPlay &&(
+          {isPlay &&(
         <Slider {...settings}>
           {posters.map((each, index) => (
             <PosterTv {...each} isDark={isDark} key={index} />
