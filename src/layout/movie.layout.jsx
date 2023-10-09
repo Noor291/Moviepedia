@@ -4,10 +4,9 @@ import MovieNavbar from '../components/navbars/movieNavbar.component'
 const MovieLayout = (Component) =>
 ({...props}) => {
   return (
-    <div>
+    <div className=' bg-[#040D12]'>
         <MovieNavbar></MovieNavbar>
         <Component {...props}/>
-        <div>Footer</div>
     </div>
   )
 }

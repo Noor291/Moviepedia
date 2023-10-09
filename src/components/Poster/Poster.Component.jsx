@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 
 const MoviePoster = (props) => {
   return (
-    <Link to={`/movie/${props.id}`}>
+    <Link to={`/item/${props.id}`}>
       <div className="flex flex-col items-start gap-2 px-1 md:px-3">
         <div className="h-40 md:h-80">
           <img
