@@ -1,5 +1,5 @@
 # Moviepedia
-
+A website utilizing Axios and the TMDB API to offer users detailed information on TV shows and movies.
 ## Demo
 
 Check out the live demo of the application [here](https://moviepedia-noor291.vercel.app/).
