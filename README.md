@@ -4,6 +4,9 @@
 
 Check out the live demo of the application [here](https://moviepedia-noor291.vercel.app/).
 
+![image](https://github.com/Noor291/Moviepedia/assets/78134535/d1f8f2e6-cfac-44c1-a5a1-1f97c1f9cd26)
+![image](https://github.com/Noor291/Moviepedia/assets/78134535/8b3fb778-81b8-48e7-9b0b-47d57a7a4bae)
+
 ## Installation
 
 To run the project locally, follow these steps:
@@ -11,7 +14,7 @@ To run the project locally, follow these steps:
 1. Clone the repository:
 
    ```
-    git clone https://github.com/Noor291/Book-My-Show-Clone.git
+    https://github.com/Noor291/Moviepedia.git
     ```
 
 2. Navigate to the project directory:
